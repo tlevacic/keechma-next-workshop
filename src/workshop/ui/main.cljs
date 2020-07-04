@@ -4,12 +4,15 @@
             [helix.core :as hx :refer [$ <>]]
             ["react" :as react]
             ["react-dom" :as rdom]
+            [keechma.next.controllers.router :as router]
             [helix.dom :as d]
-            [workshop.ui.components.sidebar :refer [Sidebar]]))
+            [workshop.ui.components.sidebar :refer [Sidebar]]
+            [workshop.ui.components.messages :refer [Messages]]))
 
 (defnc MainRenderer
   [props]
        (<>
-         ($ Sidebar)))
+         ($ Sidebar)
+         ($ Messages)))
 
 (def Main (with-keechma MainRenderer))
