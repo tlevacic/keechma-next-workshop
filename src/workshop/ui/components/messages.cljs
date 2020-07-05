@@ -49,7 +49,7 @@
 (defnc MessagesRenderer [props]
        (let [{:keys [page subpage box]} (use-sub props :router)
              data (filter-data emails page)]
-         (d/div
+         (d/div {:class "col-9"}
            (map
              (fn [ele]
                ($ Message {:email ele & props})) data))))

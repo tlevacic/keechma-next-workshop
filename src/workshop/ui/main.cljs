@@ -11,7 +11,7 @@
 
 (defnc MainRenderer
   [props]
-       (d/div {:class "flex flex-row"}
+       (d/div {:class "flex flex-row col-12"}
          ($ Sidebar)
          ($ Messages)))
 
