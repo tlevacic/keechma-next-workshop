@@ -1,7 +1,7 @@
 (ns app.controllers.jwt
   (:require [keechma.next.controller :as ctrl]
             [hodgepodge.core :refer [local-storage get-item set-item remove-item]]
-            [app.settings :refer [jwt-ls-name]]))
+            [workshop.settings :refer [jwt-ls-name]]))
 
 (derive :jwt :keechma/controller)
 

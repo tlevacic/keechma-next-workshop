@@ -20,8 +20,7 @@
 
 (def pipelines
   {:keechma.on/start (pipeline! [value {:keys [deps-state*]}]
-                       (let [{:keys [entitydb router]} @deps-state*
-                             article-slug (:slug router)
+                       (let [{:keys [entitydb router]} @deps-state* article-slug (:slug router)
                              article (edb/get-entity entitydb :article article-slug)]
                          (if article
                            (pipeline! [value ctrl]
